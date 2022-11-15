@@ -23,7 +23,7 @@ mixin _$User {
   int get id => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
-  int get phone => throw _privateConstructorUsedError;
+  String get phone => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -36,7 +36,8 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res, User>;
   @useResult
-  $Res call({int id, String username, String email, int phone, bool isPremium});
+  $Res call(
+      {int id, String username, String email, String phone, bool isPremium});
 }
 
 /// @nodoc
@@ -74,7 +75,7 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
       phone: null == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       isPremium: null == isPremium
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
@@ -89,7 +90,8 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$$_UserCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, String username, String email, int phone, bool isPremium});
+  $Res call(
+      {int id, String username, String email, String phone, bool isPremium});
 }
 
 /// @nodoc
@@ -123,7 +125,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
       phone: null == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       isPremium: null == isPremium
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
@@ -151,7 +153,7 @@ class _$_User implements _User {
   @override
   final String email;
   @override
-  final int phone;
+  final String phone;
   @override
   @JsonKey()
   final bool isPremium;
@@ -199,7 +201,7 @@ abstract class _User implements User {
       {required final int id,
       required final String username,
       required final String email,
-      required final int phone,
+      required final String phone,
       final bool isPremium}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -211,7 +213,7 @@ abstract class _User implements User {
   @override
   String get email;
   @override
-  int get phone;
+  String get phone;
   @override
   bool get isPremium;
   @override

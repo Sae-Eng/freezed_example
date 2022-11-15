@@ -9,7 +9,7 @@ class User with _$User {
     required int id,
     required String username,
     required String email,
-    required int phone,
+    required String phone,
     @Default(false) bool isPremium,
   }) = _User;
 
